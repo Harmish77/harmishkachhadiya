@@ -1418,6 +1418,14 @@ body[data-theme="dark"] .stat-number {
   .skill-box:nth-child(8) {
     grid-column: span 1;
   }
+
+  .skill-box.design-box {
+    grid-column: span 2;
+  }
+
+  .design-box-left {
+    min-width: 220px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2733,6 +2741,110 @@ body[data-theme="dark"] .map-popup-company span {
 .highlight-box .tag {
   background: var(--white);
   border: 3px solid var(--border);
+}
+
+/* ── Graphics Design Featured Box ── */
+.skill-box.design-box {
+  grid-column: span 6;
+  background: #fff0f6;
+  border: 4px solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+}
+
+body[data-theme="dark"] .skill-box.design-box {
+  background: #2a1a20;
+}
+
+.skill-box.design-box::before {
+  height: 10px;
+  background: var(--pink) !important;
+}
+
+.skill-box.design-box .skill-icon-large {
+  font-size: 4.5rem;
+  color: var(--pink) !important;
+}
+
+.skill-box.design-box .skill-box-header {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.skill-box.design-box .skill-box-title {
+  font-size: 2rem;
+}
+
+.design-box-sub {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--pink);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  letter-spacing: 0.2px;
+}
+
+.design-box-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.design-box-left {
+  flex: 0 0 auto;
+  min-width: 280px;
+  border-right: 4px dashed var(--border);
+  padding-right: 3rem;
+}
+
+.design-box-right {
+  flex: 1;
+}
+
+.skill-box.design-box .tag {
+  background: #fff0f6;
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  font-size: 0.9rem;
+  padding: 0.7rem 1.2rem;
+}
+
+body[data-theme="dark"] .skill-box.design-box .tag {
+  background: #3a1a25;
+}
+
+.skill-box.design-box .tag:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--border);
+}
+
+.skill-box.design-box .tag:hover i {
+  color: #fff;
+}
+
+.skill-box.design-box .tag i {
+  color: var(--pink);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .skill-box.design-box {
+    grid-column: span 1;
+  }
+  .design-box-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .design-box-left {
+    border-right: none;
+    border-bottom: 4px dashed var(--border);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    min-width: unset;
+    width: 100%;
+  }
 }
 
 .skill-box .tag:hover {
